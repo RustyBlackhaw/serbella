@@ -1,58 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ser Bella Detox and Wellness</title>
-  <meta name="description" content="Ser Bella Detox and Wellness – holistic detox, lymphatic care, and wellness services." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans text-slate-800 bg-slate-50">
-  <header class="bg-brand-900 text-white p-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-lg font-semibold">Ser Bella Detox and Wellness</h1>
-      <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener" class="bg-white text-brand-900 px-4 py-2 rounded shadow">Book a Session</a>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold">Ser Bella Detox & Wellness</h1>
+      <nav>
+        <a href="#services" class="px-3 hover:text-blue-500">Services</a>
+        <a href="#about" class="px-3 hover:text-blue-500">About</a>
+        <a href="#contact" class="px-3 hover:text-blue-500">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto p-6">
-    <section class="text-center py-12">
-      <h2 class="text-4xl font-bold mb-4">Reset, Renew, and Restore</h2>
-      <p class="text-lg text-slate-600 mb-6">Personalized detox and wellness services designed to help your body feel lighter, your mind clearer, and your skin glow.</p>
-      <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener" class="bg-brand-500 text-white px-6 py-3 rounded hover:bg-brand-600">Book Now</a>
-    </section>
+  <!-- Hero -->
+  <section class="bg-cover bg-center h-96" style="background-image: url('https://via.placeholder.com/1200x400');">
+    <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+      <h2 class="text-white text-4xl md:text-5xl font-bold text-center">
+        Refresh. Renew. Rejuvenate.
+      </h2>
+    </div>
+  </section>
 
-    <section id="services" class="py-12">
-      <h3 class="text-2xl font-semibold mb-6">Our Services</h3>
-      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <li class="p-6 bg-white rounded shadow">
-          <img src="https://images.unsplash.com/photo-1556228578-8ea86f0b0f9a?q=80&w=1200&auto=format&fit=crop" alt="Lymphatic massage" class="h-44 w-full object-cover mb-4 rounded">
-          <h4 class="text-xl font-semibold">Lymphatic Drainage Massage</h4>
-          <p class="mt-2 text-slate-600">Gentle, rhythmic technique to support your body's natural detox pathways.</p>
-        </li>
-        <li class="p-6 bg-white rounded shadow">
-          <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=1200&auto=format&fit=crop" alt="Body contouring" class="h-44 w-full object-cover mb-4 rounded">
-          <h4 class="text-xl font-semibold">Body Contouring</h4>
-          <p class="mt-2 text-slate-600">Non-invasive modalities paired with massage to smooth and tone.</p>
-        </li>
-        <li class="p-6 bg-white rounded shadow">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop" alt="Detox package" class="h-44 w-full object-cover mb-4 rounded">
-          <h4 class="text-xl font-semibold">Detox & Wellness Packages</h4>
-          <p class="mt-2 text-slate-600">Bundle sessions for deeper results and lasting benefits.</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+  <!-- Services -->
+  <section id="services" class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8">Our Services</h3>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-gray-100 rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/300x200" alt="Service 1" class="rounded mb-4" />
+          <h4 class="font-bold text-xl mb-2">Detox Programs</h4>
+          <p>Cleanse your body and mind with our specialized detox treatments.</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/300x200" alt="Service 2" class="rounded mb-4" />
+          <h4 class="font-bold text-xl mb-2">Wellness Coaching</h4>
+          <p>Personalized wellness coaching to help you achieve your goals.</p>
+        </div>
+        <div class="bg-gray-100 rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/300x200" alt="Service 3" class="rounded mb-4" />
+          <h4 class="font-bold text-xl mb-2">Beauty Treatments</h4>
+          <p>Enhance your natural beauty with our premium treatments.</p>
+        </div>
+      </div>
+      <a href="https://serbelladetoxandwellness.glossgenius.com" target="_blank" 
+         class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow">
+        Book Now
+      </a>
+    </div>
+  </section>
 
-  <footer class="bg-white border-t border-slate-200 p-4 text-center text-slate-500 text-sm">
-    © <span id="year"></span> Ser Bella Detox and Wellness. All rights reserved.
+  <!-- About -->
+  <section id="about" class="py-16 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
+      <p>
+        At Ser Bella Detox and Wellness, we believe in holistic healing and beauty.
+        Our team is dedicated to helping you feel and look your best through
+        personalized treatments and compassionate care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">Contact Us</h3>
+      <p>Email: <a href="mailto:info@serbelladetox.com" class="text-blue-500">info@serbelladetox.com</a></p>
+      <p>Phone: <a href="tel:+1234567890" class="text-blue-500">(123) 456-7890</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Ser Bella Detox and Wellness. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
