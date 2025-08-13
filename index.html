@@ -1,87 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ser Bella Detox and Wellness</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ser Bella Detox & Wellness — Lymphatic Care, Contouring, Wellness</title>
+  <meta name="description" content="Ser Bella Detox & Wellness in San Antonio. Lymphatic drainage, body contouring, and holistic wellness packages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lavender: "#CBA4E5",
+              mint: "#A4E5C4",
+              cream: "#FFF8E7",
+              deep: "#6A4B8A"  // deeper lavender for text/hover
+            }
+          },
+          fontFamily: { sans: ["Inter","system-ui","sans-serif"] },
+          boxShadow: { soft: "0 10px 30px rgba(0,0,0,.08)" }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Subtle gradient overlay for hero */
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(103,78,167,.35),rgba(103,78,167,.25))}
+    /* Light Flower of Life watermark */
+    .fol-watermark{
+      position:absolute; inset: -80px auto auto -80px; width: 420px; opacity:.08; pointer-events:none;
+      filter: blur(.2px);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="font-sans text-slate-800 bg-brand-cream">
+
+  <!-- Top bar -->
+  <div class="bg-brand-deep text-brand-cream text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <span>Ser Bella Detox & Wellness • San Antonio, TX</span>
+      <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+         class="underline underline-offset-4 hover:no-underline">Book online</a>
+    </div>
+  </div>
 
   <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold">Ser Bella Detox & Wellness</h1>
-      <nav>
-        <a href="#services" class="px-3 hover:text-blue-500">Services</a>
-        <a href="#about" class="px-3 hover:text-blue-500">About</a>
-        <a href="#contact" class="px-3 hover:text-blue-500">Contact</a>
+  <header class="sticky top-0 z-40 bg-brand-cream/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="relative h-11 w-11 rounded-2xl grid place-items-center bg-brand-lavender text-white shadow-soft">
+          <!-- Mini Flower of Life logo -->
+          <svg viewBox="0 0 120 120" class="h-7 w-7" aria-hidden="true">
+            <g fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+              <!-- 7-circle flower (center + 6) -->
+              <circle cx="60" cy="60" r="18"/>
+              <circle cx="60" cy="42" r="18"/>
+              <circle cx="77.588" cy="51" r="18"/>
+              <circle cx="77.588" cy="69" r="18"/>
+              <circle cx="60" cy="78" r="18"/>
+              <circle cx="42.412" cy="69" r="18"/>
+              <circle cx="42.412" cy="51" r="18"/>
+            </g>
+          </svg>
+        </div>
+        <span class="text-lg sm:text-xl font-semibold text-brand-deep">Ser Bella Detox & Wellness</span>
+      </a>
+      <!-- Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-brand-deep">Services</a>
+        <a href="#featured" class="hover:text-brand-deep">Featured</a>
+        <a href="#testimonials" class="hover:text-brand-deep">Testimonials</a>
+        <a href="#contact" class="hover:text-brand-deep">Contact</a>
+        <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+           class="rounded-xl bg-brand-mint text-slate-800 px-4 py-2 shadow-soft hover:brightness-95">Book Now</a>
       </nav>
+      <button class="md:hidden border border-slate-300 px-3 py-2 rounded-xl"
+              onclick="document.getElementById('mnav').classList.toggle('hidden')" aria-label="Open menu">☰</button>
+    </div>
+    <div id="mnav" class="md:hidden hidden border-t border-slate-200 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a href="#services" class="py-2">Services</a>
+        <a href="#featured" class="py-2">Featured</a>
+        <a href="#testimonials" class="py-2">Testimonials</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+           class="rounded-xl bg-brand-mint text-slate-800 px-4 py-2 text-center">Book Now</a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-cover bg-center h-96" style="background-image: url('https://via.placeholder.com/1200x400');">
-    <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
-      <h2 class="text-white text-4xl md:text-5xl font-bold text-center">
-        Refresh. Renew. Rejuvenate.
-      </h2>
+  <section class="relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1600336754788-0c4b937f0610?q=80&w=1600&auto=format&fit=crop"
+         alt="Calm treatment room" class="w-full h-[520px] object-cover">
+    <div class="hero-overlay"></div>
+    <div class="absolute inset-0">
+      <div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+        <div class="relative max-w-2xl text-white">
+          <!-- watermark in hero corner -->
+          <svg class="fol-watermark" viewBox="0 0 240 240">
+            <g fill="none" stroke="white" stroke-width="1.3">
+              <!-- simple flower-of-life ring pattern -->
+              <circle cx="120" cy="120" r="36"/>
+              <circle cx="120" cy="84" r="36"/>
+              <circle cx="151.18" cy="102" r="36"/>
+              <circle cx="151.18" cy="138" r="36"/>
+              <circle cx="120" cy="156" r="36"/>
+              <circle cx="88.82" cy="138" r="36"/>
+              <circle cx="88.82" cy="102" r="36"/>
+            </g>
+          </svg>
+          <h1 class="text-4xl sm:text-5xl font-semibold leading-tight">Reset, Renew, Restore</h1>
+          <p class="mt-4 text-lg opacity-95">Lymphatic care, body contouring, and holistic wellness tailored to you.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+               class="rounded-2xl bg-brand-mint text-slate-900 px-6 py-3 font-semibold shadow-soft hover:brightness-95">
+               Book a Session
+            </a>
+            <a href="#services"
+               class="rounded-2xl border border-white/80 px-6 py-3 font-semibold hover:bg-white/10">Explore Services</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 px-6 bg-white">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-8">Our Services</h3>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="bg-gray-100 rounded-lg shadow p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Service 1" class="rounded mb-4" />
-          <h4 class="font-bold text-xl mb-2">Detox Programs</h4>
-          <p>Cleanse your body and mind with our specialized detox treatments.</p>
+  <section id="services" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-brand-deep">Our Services</h2>
+    <p class="mt-2 text-slate-700 max-w-2xl">A curated menu focused on lymphatic health, body contouring, and holistic wellness.</p>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-200/60">
+        <img src="https://images.unsplash.com/photo-1556228578-8ea86f0b0f9a?q=80&w=1200&auto=format&fit=crop"
+             class="h-44 w-full object-cover" alt="Lymphatic massage">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-deep">Lymphatic Drainage Massage</h3>
+          <p class="mt-2 text-slate-700">Gentle rhythmic technique to support natural detox pathways.</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="font-semibold text-brand-lavender">60–90 min</span>
+            <a target="_blank" rel="noopener" href="https://serbelladetoxandwellness.glossgenius.com/"
+               class="text-brand-deep hover:underline">Book →</a>
+          </div>
         </div>
-        <div class="bg-gray-100 rounded-lg shadow p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Service 2" class="rounded mb-4" />
-          <h4 class="font-bold text-xl mb-2">Wellness Coaching</h4>
-          <p>Personalized wellness coaching to help you achieve your goals.</p>
+      </article>
+
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-200/60">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=1200&auto=format&fit=crop"
+             class="h-44 w-full object-cover" alt="Body contouring">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-deep">Body Contouring</h3>
+          <p class="mt-2 text-slate-700">Non-invasive modalities paired with massage to smooth and tone.</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="font-semibold text-brand-lavender">45–75 min</span>
+            <a target="_blank" rel="noopener" href="https://serbelladetoxandwellness.glossgenius.com/"
+               class="text-brand-deep hover:underline">Book →</a>
+          </div>
         </div>
-        <div class="bg-gray-100 rounded-lg shadow p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Service 3" class="rounded mb-4" />
-          <h4 class="font-bold text-xl mb-2">Beauty Treatments</h4>
-          <p>Enhance your natural beauty with our premium treatments.</p>
+      </article>
+
+      <article class="bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-200/60">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
+             class="h-44 w-full object-cover" alt="Detox packages">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-deep">Detox & Wellness Packages</h3>
+          <p class="mt-2 text-slate-700">Bundle sessions for deeper, longer-lasting results.</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="font-semibold text-brand-lavender">Packages</span>
+            <a target="_blank" rel="noopener" href="https://serbelladetoxandwellness.glossgenius.com/"
+               class="text-brand-deep hover:underline">Book →</a>
+          </div>
         </div>
-      </div>
-      <a href="https://serbelladetoxandwellness.glossgenius.com" target="_blank" 
-         class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow">
-        Book Now
-      </a>
+      </article>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 px-6 bg-gray-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
-      <p>
-        At Ser Bella Detox and Wellness, we believe in holistic healing and beauty.
-        Our team is dedicated to helping you feel and look your best through
-        personalized treatments and compassionate care.
-      </p>
+  <!-- Featured -->
+  <section id="featured" class="bg-white border-y border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-semibold text-brand-deep">Featured Treatments</h2>
+      <div class="mt-8 grid gap-6 lg:grid-cols-2">
+        <article class="rounded-2xl bg-brand-cream p-6 border border-slate-200/60">
+          <h3 class="text-xl font-semibold text-brand-deep">Glow & Tone Session</h3>
+          <p class="mt-2 text-slate-700">A quick-reset combo to refresh complexion and reduce puffiness.</p>
+          <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+             class="mt-4 inline-block rounded-xl bg-brand-lavender text-white px-4 py-2 shadow-soft hover:brightness-95">
+            Book Now
+          </a>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-slate-200/60">
+          <img src="https://images.unsplash.com/photo-1604881987791-8a81a6fbd39f?q=80&w=1600&auto=format&fit=crop"
+               class="w-full h-56 object-cover" alt="Featured">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-brand-deep">What Clients Say</h2>
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      <figure class="rounded-2xl bg-white p-6 shadow-soft border border-slate-200/60">
+        <blockquote class="text-slate-700">“Felt lighter and relaxed after one session. Caring, professional, and kind.”</blockquote>
+        <figcaption class="mt-3 text-sm text-slate-500">— A. M.</figcaption>
+      </figure>
+      <figure class="rounded-2xl bg-white p-6 shadow-soft border border-slate-200/60">
+        <blockquote class="text-slate-700">“Clear guidance and great results—highly recommend the lymphatic package.”</blockquote>
+        <figcaption class="mt-3 text-sm text-slate-500">— S. R.</figcaption>
+      </figure>
+      <figure class="rounded-2xl bg-white p-6 shadow-soft border border-slate-200/60">
+        <blockquote class="text-slate-700">“Booking was easy and the studio is beautiful.”</blockquote>
+        <figcaption class="mt-3 text-sm text-slate-500">— J. K.</figcaption>
+      </figure>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">Contact Us</h3>
-      <p>Email: <a href="mailto:info@serbelladetox.com" class="text-blue-500">info@serbelladetox.com</a></p>
-      <p>Phone: <a href="tel:+1234567890" class="text-blue-500">(123) 456-7890</a></p>
+  <section id="contact" class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-8 lg:grid-cols-2">
+      <div class="relative">
+        <!-- background watermark -->
+        <svg class="absolute -top-14 -left-10 w-64 opacity-10" viewBox="0 0 240 240" aria-hidden="true">
+          <g fill="none" stroke="#6A4B8A" stroke-width="1.2">
+            <circle cx="120" cy="120" r="36"/>
+            <circle cx="120" cy="84" r="36"/>
+            <circle cx="151.18" cy="102" r="36"/>
+            <circle cx="151.18" cy="138" r="36"/>
+            <circle cx="120" cy="156" r="36"/>
+            <circle cx="88.82" cy="138" r="36"/>
+            <circle cx="88.82" cy="102" r="36"/>
+          </g>
+        </svg>
+        <h2 class="text-3xl font-semibold text-brand-deep">Get in touch</h2>
+        <p class="mt-3 text-slate-700">San Antonio, TX — by appointment only.</p>
+        <div class="mt-4 space-y-1 text-slate-800">
+          <p><span class="font-medium">Email:</span> hello@serbelladetox.com</p>
+          <p><span class="font-medium">Phone:</span> (210) 555-0123</p>
+        </div>
+        <div class="mt-6">
+          <a href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-xl bg-brand-mint text-slate-900 px-5 py-3 hover:brightness-95 shadow-soft">
+            Book Consultation
+          </a>
+        </div>
+      </div>
+      <!-- Simple contact form placeholder -->
+      <form class="rounded-2xl bg-brand-cream p-6 shadow-soft border border-slate-200/60">
+        <div class="grid gap-4">
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Full Name</span>
+            <input class="mt-1 w-full rounded-xl border-slate-300 focus:border-brand-lavender focus:ring-brand-lavender" placeholder="Jane Doe" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Email</span>
+            <input type="email" class="mt-1 w-full rounded-xl border-slate-300 focus:border-brand-lavender focus:ring-brand-lavender" placeholder="you@example.com" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Message</span>
+            <textarea rows="4" class="mt-1 w-full rounded-xl border-slate-300 focus:border-brand-lavender focus:ring-brand-lavender" placeholder="How can we help?"></textarea>
+          </label>
+          <button type="button" class="rounded-xl bg-brand-lavender text-white px-5 py-3 hover:brightness-95">Send</button>
+          <p class="text-xs text-slate-500">POC note: form isn’t wired yet—we can hook up Formspree or Google Forms.</p>
+        </div>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>&copy; 2025 Ser Bella Detox and Wellness. All rights reserved.</p>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl grid place-items-center bg-brand-lavender text-white shadow-soft">
+          <!-- mini logo again -->
+          <svg viewBox="0 0 120 120" class="h-6 w-6" aria-hidden="true">
+            <g fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+              <circle cx="60" cy="60" r="18"/>
+              <circle cx="60" cy="42" r="18"/>
+              <circle cx="77.588" cy="51" r="18"/>
+              <circle cx="77.588" cy="69" r="18"/>
+              <circle cx="60" cy="78" r="18"/>
+              <circle cx="42.412" cy="69" r="18"/>
+              <circle cx="42.412" cy="51" r="18"/>
+            </g>
+          </svg>
+        </div>
+        <span class="font-semibold text-brand-deep">Ser Bella Detox & Wellness</span>
+      </div>
+      <small class="text-slate-600">© <span id="year"></span> All rights reserved.</small>
+    </div>
   </footer>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
