@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ser Bella • Detox & Wellness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Allura&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+// ...existing code...
   <style>
     :root{
       --cream:#EEEAE2; --beige:#D7CBBE; --terracotta:#B48666; --brown:#6F503B; --sage:#5E6F56; --ink:#2C241E; --muted:#8A7E74;
@@ -32,7 +26,16 @@
     .btn:hover{background:rgba(111,80,59,.06)}
     .btn.primary{background:var(--sage);border-color:var(--sage);color:#fff}
     .hero{display:grid;place-items:center;padding:clamp(20px,5vw,60px)}
-    .centerpiece{width:min(1080px,92vw);height:auto;border-radius:24px;box-shadow:var(--shadow)}
+    .centerpiece {
+      width: 100%;
+      max-width: 1080px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      display: block;
+      margin: 0 auto;
+    }
     .page{padding: clamp(40px,7vw,120px)  clamp(20px,6vw,72px);}
     .page h2{font-family:Marcellus,serif;color:var(--brown);font-weight:400;margin:0 0 10px}
     .page p{max-width:70ch;color:#3d332b}
@@ -46,33 +49,8 @@
     .footer{background:var(--beige);color:#3d332b;padding:36px;border-top-left-radius:36px;border-top-right-radius:36px}
     .container{max-width:1200px;margin:0 auto}
   </style>
-</head>
-<body>
-  <div class="nav-wrap">
-    <nav class="nav">
-      <div class="brand">
-        <h1>Ser Bella</h1>
-        <span class="sparkles" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l1.2 3.8 3.8 1.2-3.8 1.2L12 12l-1.2-3.8L7 7l3.8-1.2L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3.5l1 3.2 3.2 1-3.2 1L12 12l-1-3.3-3.2-1 3.2-1 1-3.2z"/></svg></span>
-      </div>
-      <ul class="menu">
-        <li><a href="#services">Services</a><div class="dropdown"><a href="#sauna">🔥 Infrared Sauna</a><a href="#body-sculpt">✨ Body Sculpt</a><a href="#glow-facial">🌿 Glow Facial</a><a href="#detox">🧘 Detox Rituals</a></div></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="btn primary" href="https://serbelladetoxandwellness.glossgenius.com/" target="_blank">Book Now</a></li>
-      </ul>
-    </nav>
-  </div>
+// ...existing code...
   <header class="hero">
-    <img class="centerpiece" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEfT2NhQlgAAR9PanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQ..." alt="Ser Bella centerpiece" />
+    <img class="centerpiece" src="images/centerpiece.png" alt="Ser Bella centerpiece" />
   </header>
-  <section id="services" class="page page--services"><div class="container"><h2>Services</h2><p>Grounded, restorative services that align with your rhythm. Explore featured offerings below or use the menu to jump to a page.</p><div class="cards"><div class="card"><strong>Infrared Sauna</strong><br/>Deep warmth, circulation, recovery. <a href="#sauna">Learn more →</a></div><div class="card"><strong>Body Sculpt</strong><br/>Non‑invasive contouring. <a href="#body-sculpt">Learn more →</a></div><div class="card"><strong>Glow Facial</strong><br/>Tone, texture & radiance. <a href="#glow-facial">Learn more →</a></div><div class="card"><strong>Detox Rituals</strong><br/>Reset and rejuvenate. <a href="#detox">Learn more →</a></div></div></div></section>
-  <section id="sauna" class="page page--sauna"><div class="container"><h2>Infrared Sauna</h2><p>Warm, wood‑wrapped sanctuary with earth‑tone ambiance. Expect improved circulation, recovery support, and deep relaxation.</p></div></section>
-  <section id="body-sculpt" class="page"><div class="container"><h2>Body Sculpt</h2><p>Gentle, non‑invasive protocols designed to enhance natural lines and support lymphatic flow.</p></div></section>
-  <section id="glow-facial" class="page page--facial"><div class="container"><h2>Glow Facial</h2><p>Nourishing skin therapy centered on hydration, tone, and texture with botanicals in an earth‑tone palette.</p></div></section>
-  <section id="detox" class="page page--detox"><div class="container"><h2>Detox Rituals</h2><p>Targeted routines to help reset, incorporating breath, heat, and restorative massage.</p></div></section>
-  <section id="about" class="page"><div class="container"><h2>About Ser Bella</h2><p>We blend modern wellness with timeless ritual—earth tones, natural textures, and gentle light to help you elevate your glow.</p></div></section>
-  <section id="contact" class="page"><div class="container"><h2>Contact Us</h2><p>Email: hello@serbella.example • Phone: (210) 555‑0100</p></div></section>
-  <footer class="footer"><div class="container"><small>© <span id="y"></span> Ser Bella • Detox & Wellness</small></div></footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body>
-</html>
+// ...existing code...
