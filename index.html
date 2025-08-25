@@ -42,7 +42,8 @@
     .dropdown{position:absolute;top:100%;left:0;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;box-shadow:var(--shadow);padding:10px;display:none;min-width:240px}
     .dropdown a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#3a3129}
     .dropdown a:hover{background:rgba(108,127,95,.10)}
-    .menu>li:hover .dropdown{display:block}
+    .menu>li:hover .dropdown,
+    .menu>li.open .dropdown{display:block}
 
     .btn{padding:10px 16px;border-radius:999px;border:1px solid var(--olive);color:#fff;background:linear-gradient(180deg,var(--sage),var(--olive));font-weight:600;box-shadow:0 10px 26px rgba(83,100,70,.25)}
     .btn:hover{transform:translateY(-1px)}
@@ -88,8 +89,8 @@
       </div>
       <ul class="menu">
         <li>
-          <a href="#services">Services</a>
-          <div class="dropdown">
+          <a href="#services" aria-expanded="false" aria-controls="services-menu">Services</a>
+          <div class="dropdown" id="services-menu">
             <a href="#sauna">🔥 Infrared Sauna</a>
             <a href="#body-sculpt">✨ Body Sculpt</a>
             <a href="#glow-facial">🌿 Glow Facial</a>
@@ -158,6 +159,25 @@
   </section>
 
   <footer class="footer"><div class="container"><small>© <span id="y"></span> Ser Bella • Detox & Wellness</small></div></footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Toggle dropdown on click/touch
+    document.querySelectorAll('.menu > li').forEach(function (item) {
+      var dropdown = item.querySelector('.dropdown');
+      if (!dropdown) return;
+      var trigger = item.querySelector('a');
+      function toggle(e) {
+        e.preventDefault();
+        var open = item.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', open);
+      }
+      trigger.addEventListener('click', toggle);
+      trigger.addEventListener('touchstart', function (e) {
+        e.preventDefault();
+        toggle(e);
+      });
+    });
+  </script>
 </body>
 </html>
